@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="h-[90px] px-[100px] bg-[#AF571C] flex justify-between items-center">
+        <div class="logo-div">
+            <img src="images/logo/cafune-logo-white-brown.png" alt="Cafuné Logo" class="cafune-logo max-w-[80px] shadow-2xl">
+        </div>
+        <menu class="text-white">  
+            <a href="">Início</a>
+            <a href="">Produtos</a>
+            <a href="">Contato</a>
+            <a href="">Nossa História</a>
+        </menu>
+        <button class="cta-button bg-white">Quero um Cafuné!</buztton>
+    </header>
+    <main>
+        <section  id="hero-section" class="mt-[40px] flex justify-center px-[50px]">
+            <div class="hero-text ml-[30px] w-[900px]">
+                <h1 class="mb-[20px]">Só é Cafuné <br> se for com amor</h1>
+                <p class="max-w-[680px] text-lg">Nossos especialistas cuidam do seu pet com toda a atenção e segurança. Agende o horário e garanta o bem-estar que seu amigo merece.</p>
+                <button class=" w-[100px] text-white bg-[#AF571C] mt-[40px] p-3 rounded-md ">Agendar</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero/cafuné petshop (4).png" alt="Imagem de gato recebendo carinho" class="max-w-[535px] max-h-[570px] rounded-[10px] shadow-2xl">
+            </div>
+        </section>
+        <section id="scheduling-section" class="m-auto w-[80vw] mt-[30px] py-16"> 
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border-[2px] border-gray-300">
+                    <div class="text-center mb-10">
+                        <h2 class="text-4xl font-bold text-[#AF571C] mb-2">Marque um Cafuné</h2>
+                        <p class="text-gray-600">Escolha o melhor momento para o seu melhor amigo.</p>
+                    </div>
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col">
+                            <label class="font-medium mb-2 text-gray-700">Nome do Pet</label>
+                            <input type="text" placeholder="Ex: Bob" class="p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF571C]/50">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label class="font-medium mb-2 text-gray-700">O que ele precisa?</label>
+                            <select class="p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF571C]/50">
+                                <option>Consulta Veterinária</option>
+                                <option>Cafuné Relax (Banho e Tosa)</option>
+                                <option>Cafuné Spa (Massagem e Hidratação)</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2 mt-4">
+                            <button class="w-full bg-[#AF571C] text-white font-bold py-4 rounded-xl hover:bg-[#914614] transition-all shadow-lg shadow-orange-200">
+                                Verificar Horários
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="products-type-section">
+            <h2>Todo bichinho merece um Cafuné</h2>
+            <div class="product-types">
+                <div class="cafune-relax">
+                    <img src="" alt="">                                <!--colocar alt certos-->
+                    <h3>Cafuné Relax</h3>
+                    <p></p>
+                </div>
+                <div class="cafune-spa">
+                    <img src="" alt="">
+                    <h3>Cafuné Spa</h3>
+                    <p></p>
+                </div>
+                <div class="cafune-gourmet">
+                    <img src="" alt="">
+                    <h3>Cafuné Gourmet</h3>
+                    <p></p>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

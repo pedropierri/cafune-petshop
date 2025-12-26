@@ -3,186 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cafuné Petshop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="h-[90px] px-[100px] bg-[#AF571C] flex justify-between items-center">
+<body class="overflow-x-hidden">
+    <header class="h-auto md:h-[90px] px-6 md:px-[100px] bg-[#AF571C] flex flex-col md:flex-row justify-between items-center py-4 md:py-0 gap-4">
         <div class="logo-div">
-            <img src="images/logo/cafune-logo-white-brown.png" alt="Cafuné Logo" class="cafune-logo max-w-[80px] shadow-2xl">
+            <img src="images/logo/cafune-logo-white-brown-2.png" alt="Cafuné Logo" class="max-w-[70px] md:max-w-[80px]">
         </div>
-        <menu class="text-white">  
-            <a href="#hero-section">Início</a>
-            <a href="#scheduling-section">Agendar</a>
-            <a href="#product-types-section">Produtos</a>
+        <menu class="flex gap-6 text-white text-sm md:text-base font-['Montserrat'] font-semibold">  
+            <a href="#hero-section" class="hover:underline">Início</a>
+            <a href="#scheduling-section" class="hover:underline">Agendar</a>
+            <a href="#products-type-section" class="hover:underline">Produtos</a>
         </menu>
-        <button class="cta-button bg-white">Quero um Cafuné!</buztton>
+        <button class="bg-white text-[#4A3728] px-6 py-[12px] rounded-xl font-bold text-sm hover:scale-105 transition-transform">
+            Quero um Cafuné!
+        </button>
     </header>
+
     <main>
-        <section  id="hero-section" class="mt-[40px] flex justify-center px-[50px]">
-            <div class="hero-text ml-[30px] w-[900px]">
-                <h1 class="mb-[20px]">Só é Cafuné <br> se for com amor</h1>
-                <p class="max-w-[680px] text-lg">Nossos especialistas cuidam do seu pet com toda a atenção e segurança. Agende o horário e garanta o bem-estar que seu amigo merece.</p>
-                <button class=" w-[100px] text-white bg-[#AF571C] mt-[40px] p-3 rounded-md ">Agendar</button>
+
+        <section id="hero-section" class="mt-10 flex flex-col-reverse lg:flex-row items-center justify-center px-6 md:px-[40px] gap-10">
+            <div class="hero-text text-center lg:text-left lg:w-[600px]">
+                <h1 class="text-[35px] md:text-7xl lg:text-[70px] font-['Poppins'] font-bold leading-tight text-[#4A3728] mb-6">
+                    Só é Cafuné <br class="hidden md:block"> se for com amor
+                </h1>
+                <p class="max-w-[680px] text-sm font-['Montserrat'] text-gray-700 mx-auto lg:mx-0">
+                    Nossos especialistas cuidam do seu pet com toda a atenção e segurança. Agende o horário e garanta o bem-estar que seu amigo merece.
+                </p>
+                <button class="w-full md:w-[130px] text-white bg-[#4A3728] mt-8 p-4 rounded-xl font-bold shadow-lg">Agendar</button>
             </div>
-            <div class="hero-image">
-                <img src="images/hero/hero-dog.png" alt="Imagem de gato recebendo carinho" class="max-w-[535px] max-h-[570px] rounded-[10px] shadow-2xl">
+            <div class="hero-image w-full max-w-[500px]">
+                <img src="images/hero/hero-dog.png" alt="Pet" class="w-full h-auto rounded-[2rem] shadow-2xl">
             </div>
         </section>
-        <section id="scheduling-section" class="m-auto w-[80vw] mt-[30px] py-16"> 
-            <div class="max-w-4xl mx-auto px-4">
-                <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border-[2px] border-gray-300">
-                    <div class="text-center mb-10">
-                        <h2 class="text-4xl font-bold text-[#AF571C] mb-2">Marque um Cafuné</h2>
-                        <p class="text-gray-600">Escolha o melhor momento para o seu melhor amigo.</p>
+
+        <section id="scheduling-section" class="max-w-4xl mx-auto mt-16 px-6 py-16"> 
+            <div class="bg-white p-6 md:p-12 rounded-[2rem] shadow-xl border-[1px] border-gray-200">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#4A3728] mb-2 font-['Poppins']">Marque um Cafuné</h2>
+                    <p class="text-gray-600 font-['Montserrat']">Escolha o melhor momento para o seu melhor amigo.</p>
+                </div>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6 font-['Montserrat']">
+                    <div class="flex flex-col">
+                        <label class="font-semibold mb-2 text-gray-700">Nome do Pet</label>
+                        <input type="text" placeholder="Ex: Bob" class="p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#AF571C]/20 outline-none">
                     </div>
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="flex flex-col">
-                            <label class="font-medium mb-2 text-gray-700">Nome do Pet</label>
-                            <input type="text" placeholder="Ex: Bob" class="p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF571C]/50">
-                        </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold mb-2 text-gray-700">O que ele precisa?</label>
+                        <select class="p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#AF571C]/20 outline-none">
+                            <option>Consulta Veterinária</option>
+                            <option>Cafuné Relax (Banho e Tosa)</option>
+                            <option>Cafuné Spa (Massagem e Hidratação)</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button class="w-full bg-[#4A3728] text-white font-bold py-4 rounded-xl hover:bg-[#4A3728] transition-all shadow-lg">
+                            Verificar Horários
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-                        <div class="flex flex-col">
-                            <label class="font-medium mb-2 text-gray-700">O que ele precisa?</label>
-                            <select class="p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#AF571C]/50">
-                                <option>Consulta Veterinária</option>
-                                <option>Cafuné Relax (Banho e Tosa)</option>
-                                <option>Cafuné Spa (Massagem e Hidratação)</option>
-                            </select>
-                        </div>
-
-                        <div class="md:col-span-2 mt-4">
-                            <button class="w-full bg-[#AF571C] text-white font-bold py-4 rounded-xl hover:bg-[#914614] transition-all shadow-lg shadow-orange-200">
-                                Verificar Horários
-                            </button>
-                        </div>
-                    </form>
+        <section id="products-type-section" class="mt-16 px-6 lg:px-[100px] py-16 bg-[#AF571C] text-white flex flex-col items-center">
+            <h2 class="mb-12 text-4xl md:text-5xl font-['Poppins'] font-bold text-center">Todo bichinho merece um...</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="bg-white/10 p-6 rounded-full mb-6">
+                        <img src="images/products/xodo/xodo-icon.svg" alt="" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 font-['Poppins']">Xodó</h3>
+                    <p class="font-['Montserrat'] opacity-90 leading-relaxed">Camas e casinhas ultra macias que garantem o sono mais profundo e tranquilo.</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="bg-white/10 p-6 rounded-full mb-6">
+                        <img src="images/products/mimo/mimo-icon.svg" alt="" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 font-['Poppins']">Mimo</h3>
+                    <p class="font-['Montserrat'] opacity-90 leading-relaxed">Petiscos naturais e brinquedos inteligentes feitos para alegrar seu amigo.</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="bg-white/10 p-6 rounded-full mb-6">
+                        <img src="images/products/cheirinho/cheirinho-icon.svg" alt="" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 font-['Poppins']">Cheirinho</h3>
+                    <p class="font-['Montserrat'] opacity-90 leading-relaxed">Produtos naturais que garantem pelos brilhantes e um perfume inesquecível.</p>
                 </div>
             </div>
         </section>
-        <section id="products-type-section" class=" mt-[35px] px-[200px] py-[80px] bg-[#AF571C] text-white flex flex-col items-center">
-            <h2 class=" mb-[40px] text-5xl">Todo bichinho merece um...</h2>
-            <div id="product-types-section" class="flex flex-row gap-[130px] text-center">
-                <div id="product-type-xodo" class="product-type flex flex-col items-center">
-                    <img src="images/products/xodo/xodo-icon.svg" alt="" class="product-type-icon">
-                    <h3 class=" my-[3px] text-4xl">Xodó</h3>
-                    <p class="">O refúgio perfeito para o descanso. Camas e casinhas ultra macias que abraçam seu pet e garantem o sono mais profundo e tranquilo.</p>
-                </div>
-                <div id="product-type-mimo" class="product-type flex flex-col items-center">
-                    <img src="images/products/mimo/mimo-icon.svg" alt="" class="product-type-icon">
-                    <h3 class="text-4xl">Mimo</h3>
-                    <p>Celebre a amizade com sabor e diversão. Petiscos naturais e brinquedos inteligentes feitos para nutrir e alegrar o dia do seu melhor amigo.</p>
-                </div>
-                <div id="product-type-cheirinho" class="product-type flex flex-col items-center">
-                    <img src="images/products/cheirinho/cheirinho-icon.svg" alt="" class="product-type-icon">
-                    <h3 class="text-4xl">Cheirinho</h3>
-                    <p>O prazer de um abraço perfumado. Produtos delicados e naturais que garantem pelos brilhantes, pele protegida e um cheirinho inesquecível.</p>
-                </div>
-            </div>
-        </section>  
-        <section id="testimonials-section" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-[#AF571C] mb-4">Quem já recebeu um Cafuné</h2>
-        <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
-            Histórias reais de pets e donos que transformaram o cuidado em um momento de puro afeto.
-        </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <div class="bg-[#F4F0EC] p-8 rounded-[3rem] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-                <p class="italic text-gray-700 mb-8 leading-relaxed text-lg">
-                    "O atendimento é impecável. O shampoo da linha Cheirinho deixou o pelo da Mel super macio e com um perfume maravilhoso!"
+        <section id="testimonials-section" class="py-20 bg-white px-6">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-[32px] md:text-4xl font-bold text-[#4A3728] mb-4 font-['Poppins']">Quem já recebeu um Cafuné</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto font-['Montserrat']">
+                    Histórias reais de quem transformou o cuidado diário em um momento de puro afeto.
                 </p>
-                <div class="flex items-center justify-center gap-3 border-t border-gray-200 pt-6">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                        <img src="images/testimonials/clara-e-mel.png" alt="">
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-[#F4F0EC] p-8 rounded-[2.5rem] flex flex-col justify-between hover:shadow-md transition-shadow">
+                        <p class="italic text-gray-700 mb-8 font-['Montserrat'] text-lg leading-relaxed">
+                            "O shampoo da linha Cheirinho deixou o pelo da Mel super macio e com um perfume maravilhoso!"
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6 w-full justify-center lg:justify-start">
+                            <img src="images/testimonials/clara-e-mel.png" alt="Clara e Mel" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-sm">
+                            <div class="text-left">
+                                <p class="font-bold text-[#5C3D2E] text-sm font-['Poppins']">Clara & Mel</p>
+                                <p class="text-xs text-gray-500 font-['Montserrat']">Cliente Fiel</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-left">
-                        <p class="font-bold text-[#AF571C] leading-none">Clara & Mel</p>
-                        <p class="text-xs text-gray-500 mt-1">Cliente fiel</p>
+
+                    <div class="bg-[#F4F0EC] p-8 rounded-[2.5rem] flex flex-col justify-between hover:shadow-md transition-shadow">
+                        <p class="italic text-gray-700 mb-8 font-['Montserrat'] text-lg leading-relaxed">
+                            "O Thor é super ansioso, mas a caminha da linha Xodó parece mágica. Ele deita e apaga em minutos, o conforto é surreal!"
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6 w-full justify-center lg:justify-start">
+                            <img src="images/testimonials/pedro-e-thor.png" alt="Pedro e Thor" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-sm">
+                            <div class="text-left">
+                                <p class="font-bold text-[#5C3D2E] text-sm font-['Poppins']">Pedro & Thor</p>
+                                <p class="text-xs text-gray-500 font-['Montserrat']">Cliente Satisfeito</p>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="bg-[#F4F0EC] p-8 rounded-[2.5rem] flex flex-col justify-between hover:shadow-md transition-shadow">
+                        <p class="italic text-gray-700 mb-8 font-['Montserrat'] text-lg leading-relaxed">
+                            "Finalmente encontrei petiscos naturais que o Lucky ama. Os brinquedos da linha Mimo são resistentes e divertidos demais!"
+                        </p>
+                        <div class="flex items-center gap-4 border-t border-gray-200 pt-6 w-full justify-center lg:justify-start">
+                            <img src="images/testimonials/beatriz-e-lucky.png" alt="Beatriz e Lucky" class="w-14 h-14 rounded-full border-2 border-white object-cover shadow-sm">
+                            <div class="text-left">
+                                <p class="font-bold text-[#5C3D2E] text-sm font-['Poppins']">Beatriz & Lucky</p>
+                                <p class="text-xs text-gray-500 font-['Montserrat']">Apaixonada pela marca</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="bg-[#F4F0EC] p-8 rounded-[3rem] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-                <p class="italic text-gray-700 mb-8 leading-relaxed text-lg">
-                    "O Thor é super ansioso, mas a caminha da linha Xodó parece mágica. Ele deita e apaga em minutos, o conforto é surreal!"
-                </p>
-                <div class="flex items-center justify-center gap-3 border-t border-gray-200 pt-6">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                        <img src="images/testimonials/pedro-e-thor.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-bold text-[#AF571C] leading-none">Pedro & Thor</p>
-                        <p class="text-xs text-gray-500 mt-1">Cliente satisfeito</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-[#F4F0EC] p-8 rounded-[3rem] shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-                <p class="italic text-gray-700 mb-8 leading-relaxed text-lg">
-                    "Finalmente encontrei petiscos naturais que o Lucky ama. Os brinquedos da linha Mimo são resistentes e divertidos demais!"
-                </p>
-                <div class="flex items-center justify-center gap-3 border-t border-gray-200 pt-6">
-                    <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                        <img src="images/testimonials/beatriz-e-lucky.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-bold text-[#AF571C] leading-none">Beatriz & Lucky</p>
-                        <p class="text-xs text-gray-500 mt-1">Apaixonada pela marca</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
     </main>
-    <footer class="bg-[#AF571C] text-white pt-16 pb-8 px-[100px]">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-            
-            <div class="flex flex-col gap-4">
-            <img src="images/logo/cafune-logo-white-brown.png" alt="Cafuné Logo" class="max-w-[100px]">
-            <p class="font-['Montserrat'] text-sm leading-relaxed opacity-80">
-                Só é Cafuné se for com amor.
-            </p>
-            </div>
-
+    <footer class="bg-[#4A3728] text-white pt-16 pb-8 px-6 lg:px-[100px]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             <div>
-            <h4 class="font-['Poppins'] font-bold text-lg mb-6">Navegação</h4>
-            <ul class="font-['Montserrat'] flex flex-col gap-3 opacity-80 text-sm">
-                <li><a href="#" class="hover:underline">Início</a></li>
-                <li><a href="#" class="hover:underline">Agendar</a></li>
-                <li><a href="#" class="hover:underline">Produtos</a></li>
-            </ul>
+                <img src="images/logo/cafune-logo-white-brown.png" alt="Logo" class="max-w-[80px] mb-4">
+                <p class="text-sm opacity-80 font-['Montserrat']">Só é Cafuné se for com amor.</p>
             </div>
-
             <div>
-            <h4 class="font-['Poppins'] font-bold text-lg mb-6">Nossas Linhas</h4>
-            <ul class="font-['Montserrat'] flex flex-col gap-3 opacity-80 text-sm">
-                <li><a href="#hero-section" class="hover:underline">Linha Xodó</a></li>
-                <li><a href="#scheduling-section" class="hover:underline">Linha Mimo</a></li>
-                <li><a href="#product-types-section" class="hover:underline">Linha Cheirinho</a></li>
-            </ul>
+                <h4 class="font-bold mb-6 font-['Poppins']">Navegação</h4>
+                <ul class="text-sm opacity-80 flex flex-col gap-3 font-['Montserrat']">
+                    <li><a href="#hero-section">Início</a></li>
+                    <li><a href="#scheduling-section">Agendar</a></li>
+                    <li><a href="#products-type-section">Produtos</a></li>
+                </ul>
             </div>
-
             <div>
-            <h4 class="font-['Poppins'] font-bold text-lg mb-6">Contato</h4>
-            <div class="font-['Montserrat'] text-sm opacity-80 flex flex-col gap-3">
-                <p>Rua do Carinho, 123 - Petrópolis</p>
-                <p>(11) 99999-9999</p>
-                <p>contato@cafunepetshop.com.br</p>
+                <h4 class="font-bold mb-6 font-['Poppins']">Contato</h4>
+                <p class="text-sm opacity-80 font-['Montserrat'] leading-relaxed">
+                    Rua do Carinho, 123<br>
+                    (00) 99999-9999<br>
+                    contato@cafune.com
+                </p>
             </div>
-            </div>
-
         </div>
-
-        <div class="mt-16 pt-8 border-t border-white/20 text-center font-['Montserrat'] text-xs opacity-60">
-            <p>&copy; 2025 Cafuné Petshop. Todos os direitos reservados.</p>
+        <div class="mt-16 pt-8 border-t border-white/20 text-center text-xs opacity-60">
+            &copy; 2025 Cafuné Petshop.
         </div>
     </footer>
 </body>
